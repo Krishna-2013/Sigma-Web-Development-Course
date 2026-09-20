@@ -1,0 +1,32 @@
+
+/* Inline Style > ID Selector > Class/Attribute/Pseudo-class > Element Selector > Universal Selector */
+/* 
+Universal Selector: 0
+Element selectors and pseudo-elements: 1
+Class selectors, attribute selectors, and pseudo-classes: 10
+ID selectors: 100
+Inline styles: 1000
+An !important at the end of a CSS value gets a specificity score of 10,000 points
+*/
+
+
+h1 {
+    color: aqua;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.purple {
+    color: purple;
+}
+
+
+[data-x=a] {
+    color: blue;
+}
+
+.red {
+    color: red !important;
+}

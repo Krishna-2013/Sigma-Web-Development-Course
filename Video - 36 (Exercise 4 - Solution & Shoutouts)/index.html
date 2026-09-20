@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 4 (Multicolor Nav Bar)</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        :root {
+            /* BGC */
+            --body-bgc : lightgray;
+            --nav-bgc : rgb(0, 0, 255);
+
+
+            /* Color */
+            --primary-color : black;
+            --secondary-color : white;
+        }
+
+        body {
+            background-color: var(--body-bgc);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        nav {
+            background-color: var(--nav-bgc);
+            color: var(--secondary-color);
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0 3vw;
+        }
+
+        li {
+            padding: 34px;
+            font-size: 21px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

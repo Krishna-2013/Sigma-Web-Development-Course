@@ -1,0 +1,33 @@
+h1 {
+    color: orange;
+}
+
+.colorCode {
+    color: blueviolet;
+    background-color: aliceblue;
+}
+
+.hexCode {
+    color: #77ff00;
+    background-color: #b1b3af;
+}
+
+.rgb {
+    color: rgb(244, 179, 167);
+    background-color: rgb(0, 111, 126);
+}
+
+.rgba {
+    color: rgba(4, 250, 172, 0.715);
+    background-color: rgba(76, 2, 2, 0.684);
+}
+
+.hsl {
+    color: hsl(235, 100%, 50%);
+    background-color: hsl(67, 8%, 77%);
+}
+
+.hsla {
+    color: hsla(50, 100%, 50%, 0.619);
+    background-color: hsla(67, 100%, 72%, 0.641);
+}

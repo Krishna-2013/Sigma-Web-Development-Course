@@ -1,0 +1,49 @@
+@media screen and (max-width: 1330px) {
+    .section {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .hero > :first-child {
+        font-size: 40px;
+    }
+
+    .heroBtns {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hero > :first-child {
+        font-size: 30px;
+    }
+
+    .hero > :nth-child(2) {
+        font-size: 15px;
+    }
+
+    .hero > :nth-child(3) {
+        font-size: 13px;
+    }
+
+    .section > div > :first-child {
+        width: 360px;
+    }
+
+    .secImg video {
+        width: 258px;
+        top: 55px;
+        left: 50px;
+    }
+    
+    .main input {
+        width: 285px;
+        margin-bottom: 1vh;
+    }
+}

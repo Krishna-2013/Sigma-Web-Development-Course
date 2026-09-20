@@ -1,0 +1,13 @@
+ul{
+    display: flex;
+    margin: 22px;
+}
+
+nav ul li {
+    padding: 12px;
+    list-style: none;
+    /* list-style: "😈"; */
+    /* list-style-position: inside; */
+    /* background-color: yel/low; */
+    /* border: 2px solid black; */
+}

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>eventBubbling</title>
+    <style>
+      .child {
+        background-color: red;
+        border: 1px solid black;
+        padding: 34px;
+        cursor: pointer;
+        margin: 24px;
+      }
+      .childContainer {
+        background-color: blue;
+        border: 1px solid black;
+        padding: 34px;
+        cursor: pointer;
+        margin: 24px;
+      }
+      .container {
+        background-color: yellow;
+        border: 1px solid black;
+        padding: 34px;
+        cursor: pointer;
+        margin: 24px;
+        transition: all 0.3 ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="childContainer">
+        <div class="child">I am a child</div>
+      </section>
+    </div>
+    <script>
+      document.querySelector(".child").addEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("The child clicked");
+      });
+
+      document
+        .querySelector(".childContainer")
+        .addEventListener("click", () => {
+          e.stopPropagation();
+          alert("The childContainer clicked");
+        });
+
+      document.querySelector(".container").addEventListener("click", () => {
+        alert("The container clicked");
+      });
+
+    //   let a = setInterval(() => {
+    //     let colorArr = [
+    //       "red",
+    //       "blue",
+    //       "green",
+    //       "yellow",
+    //       "black",
+    //       "gray",
+    //       "brown",
+    //       "orange",
+    //       "pink",
+    //       "purple",
+    //     ];
+
+    //     let container = document.querySelector(".container");
+    //     index = Math.floor(Math.random() * colorArr.length);
+    //     container.style.backgroundColor = colorArr[index];
+    //   }, 1000);
+
+      let a = setTimeout(() => {
+        let colorArr = [
+          "red",
+          "blue",
+          "green",
+          "yellow",
+          "black",
+          "gray",
+          "brown",
+          "orange",
+          "pink",
+          "purple",
+        ];
+
+        let container = document.querySelector(".container");
+        index = Math.floor(Math.random() * colorArr.length);
+        container.style.backgroundColor = colorArr[index];
+      }, 1000);
+      console.log(a);
+    </script>
+  </body>
+</html>

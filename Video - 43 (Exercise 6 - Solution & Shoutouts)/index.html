@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6 - Navbar using Flexbox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        nav {
+            /* background-color: red; */
+            height: 8vh;
+            width: 60vw;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left {
+            padding: 1vh;
+            display: flex;
+        }
+
+        .logo {
+            height: 5vh;
+            width: 5vh;
+            background-image: url(logo.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .heading {
+            display: flex;
+            align-items: center;
+        }
+
+        .heading > h2 {
+            margin: 0 2vh;
+            font-weight: bolder;
+        }
+
+        .right ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .right ul li {
+            margin: 2vh;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <div class="logo"></div>
+            <div class="heading">
+                <h2>UltraEdit</h2>
+            </div>
+        </div>
+        <div class="right">
+            <ul>
+                <li>Products <i class="fa-solid fa-angle-down"></i></li>
+                <li>Pricing <i class="fa-solid fa-angle-down"></i></li>
+                <li>Resources <i class="fa-solid fa-angle-down"></i></li>
+                <li>About Us <i class="fa-solid fa-angle-down"></i></li>
+                <li></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

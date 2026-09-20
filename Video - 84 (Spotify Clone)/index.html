@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="shortcut icon" href="img/spotify.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+  </head>
+  <body>
+    <div class="container flex bg-black">
+      <div class="left border-red">
+        <div class="close">
+          <img class="invert-w cursor" src="img/close.svg" alt="">
+        </div>
+        <div class="home bg-grey rounded m1 p1 font-title">
+          <div class="logo cursor">
+            <img class="invert-w" src="img/logo.svg" alt="" />
+          </div>
+          <ul>
+            <li class="cursor">
+              <img class="invert-w" src="img/home.svg" alt="home" />Home
+            </li>
+            <li class="font-norc cursor">
+              <img class="invert-g" src="img/search.svg" alt="search" />Search
+            </li>
+          </ul>
+        </div>
+        <div class="library bg-grey rounded m1 p1 font-title">
+          <div class="heading font-norc cursor">
+            <img class="invert-g" src="img/playlist.svg" alt="" />
+            <p>Your Library</p>
+          </div>
+          <div class="songList">
+            <ul>
+            </ul>
+          </div>
+          <div class="footer font-title">
+            <div class="first">
+              <ul>
+                <li><a href="">Legal</a></li>
+                <li><a href="">Safety & Privacy Center</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Cookies</a></li>
+              </ul>
+            </div>
+            <div class="second">
+              <ul>
+                <li><a href="">About Ads</a></li>
+                <li><a href="">Accessibility</a></li>
+              </ul>
+            </div>
+            <div class="third">
+              <ul>
+                <li><a href="">Cookies</a></li>
+              </ul>
+            </div>
+            <div class="fourth">
+              <button class="bg-black cursor">
+                <img
+                  src="img/globe.svg"
+                  alt="English"
+                  class="invert-w"
+                />English
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right border-red bg-black">
+        <div class="header">
+          <div class="nav">
+            <div class="hamburger cursor">
+              <img class="invert-w" src="img/more.svg" alt="">
+            </div>
+            <img src="img/left.svg" class="cursor" alt="" />
+            <img src="img/right.svg" class="cursor" alt="" />
+          </div>
+          <div class="buttons">
+            <button class="signBtn bg-black font-title font-norc cursor">
+              Sing Up
+            </button>
+            <button class="loginBtn font-title cursor">LogIn</button>
+          </div>
+        </div>
+        <div class="playlists font-title bg-grey rounded">
+          <h1>Spotify Playlists</h1>
+          <div class="cardContainer"></div>
+          <div class="playBar">
+            <div class="bar rounded">
+              
+              <div class="seekBar cursor">
+                <!-- <div class="circle">
+                  
+                </div> -->
+                <div class="line"></div>
+              </div>
+
+              <div class="songInfo"></div>
+              <div class="songBtns">
+                <img id="prev" class="invert-w cursor" src="img/previous.svg" alt="" />
+                <img id="play" class="cursor" src="img/playBtn.png" alt="" />
+                <img id="next" class="invert-w cursor" src="img/next.svg" alt="" />
+              </div>
+              <div class="last">
+                <div class="songTime">00:00 / 00:00</div>
+                <div class="volume">
+                  <img class="invert-w cursor" src="img/volume.svg" alt="">
+                  <div class="range">
+                    <input type="range" class="cursor">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

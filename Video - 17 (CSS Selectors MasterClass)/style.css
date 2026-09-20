@@ -1,0 +1,59 @@
+/* Selector */
+/* Here div is element selector */
+/* div {
+            background-color: red;
+        } */
+
+/* Class Selector */
+/* Here '.red' is the selector of class 'red' */
+.red {
+  background-color: red;
+}
+
+/* ID Selector */
+/* Here '#green' is the selector of id 'green' */
+#green {
+  background-color: green;
+}
+
+/* Child Selector */
+/* Here 'div > p' is the selector of the child para of div. but it also need it will be the direct child of a div. it dont apply the property if it is inside of a child of a div */
+/* div > p {
+            color: blue;
+            background-color: yellow;
+        } */
+
+/* Descendant Selector */
+/* Here 'div p' is the selector of the child para of div. it can be applyed though out any child of the div */
+div p {
+  color: blue;
+  background-color: yellow;
+}
+
+/* Universal Selector */
+/* Select every element of the document and apply the properties to all */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Pseudo Selectors*/
+a:visited {
+  color: yellow;
+}
+
+a:link {
+  color: green;
+}
+
+a:active {
+  background-color: red;
+}
+
+a:hover {
+  color: black;
+}
+
+p:first-child {
+  background-color: aqua;
+}

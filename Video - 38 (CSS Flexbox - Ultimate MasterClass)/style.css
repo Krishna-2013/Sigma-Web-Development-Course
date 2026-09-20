@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    border: 2px solid red;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+.item {
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    border: 2px solid black;
+    margin: 15px;
+    /* padding: 50px; */
+    gap: 30px;
+    /* column-gap: 30px;
+    row-gap: 30px; */
+    /* gap: 30px 30px; */
+    color: white;
+    font-size: 30px;
+}

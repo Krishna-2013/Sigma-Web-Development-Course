@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 3 - Design this Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background-color: #eaeef0;
+        overflow: hidden;
+      }
+
+      .frame {
+        background-color: #fff;
+        height: 63vh;
+        width: 20vw;
+        margin: 20vh auto;
+        border-radius: 15px;
+        box-shadow: 5px 5px 4px #888888;
+      }
+
+      .photo img {
+        width: 19vw;
+        margin: 0.5vw;
+        border-radius: 10px;
+      }
+
+      .tag {
+        margin: 20px;
+        color: #a1a4a8;
+      }
+
+      .tag span {
+        border: 1px solid gray;
+        border-radius: 50px;
+        margin: 10px;
+        padding: 5px 15px;
+      }
+
+      .title,
+      .description {
+        margin: 20px;
+      }
+
+      .description {
+        color: #a1a4a8;
+        font-size: 20px;
+      }
+
+      .button p {
+        color: blue;
+        width: 5vw;
+        padding: 10px;
+        background-color: #e0eeff;
+        border-radius: 50px;
+        margin: auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="photo">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP8yGuDDBINqOdIbbrUVrBZvNwCTQMp_0ZCg&s"
+          alt="nature image"
+        />
+      </div>
+      <div class="tag">
+        <span>Nature</span>
+        <span>Lake</span>
+      </div>
+      <div class="info">
+        <div class="title">
+          <h1>Lorem, ipsum dolor.</h1>
+        </div>
+        <div class="description">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum?
+          </p>
+          <p>Lorem ipsum dolor sit.</p>
+        </div>
+      </div>
+      <div class="button">
+        <p>Read Now</p>
+      </div>
+    </div>
+  </body>
+</html>

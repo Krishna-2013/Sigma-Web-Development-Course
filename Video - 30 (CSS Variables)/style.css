@@ -1,0 +1,36 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* Color */
+    --primary-color : white;
+    --secondary-color : black;
+
+    /* Background Color */
+    --primary-bgc : rgb(4, 175, 4);
+    --secondary-bgc : rgb(221, 189, 48);    
+}
+
+.nav {
+    background-color: var(--primary-bgc);
+    color: white;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 34px;
+}
+
+
+.container {
+    background-color: var(--secondary-bgc);
+    color: white;
+    padding: 5px;
+}

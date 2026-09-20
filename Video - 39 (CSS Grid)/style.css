@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 80vw;
+    height: 50vh;
+    margin: 20px auto;
+    border: 2px solid red;
+    /* height: 80vh; */
+    display: grid;
+    grid-template-columns: [prothom] 120px [ditio] 100px;
+    /* grid-template-rows: 100px 100px 100px; */
+    grid-template-columns: repeat(3, 1fr);
+    /* justify-content: center; */
+    /* align-content: center; */
+    justify-items: center;
+    align-items: center;
+}
+
+.item {
+    padding: 10px;
+    margin: 12px;
+    border: 2px solid black;
+    height: 50px;
+    width: 55px;
+
+}
+
+/* .item-4 {
+    grid-column: prothom/ditio;
+    grid-row: 1/2;
+}
+
+.item-1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+} */

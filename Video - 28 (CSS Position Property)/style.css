@@ -1,0 +1,64 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.box {
+    height: 733px;
+    width: 60vw;
+    padding: 33px;
+    margin: 3px;
+    border: 2px solid black;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.box1 {
+    background-color: yellow;
+    /* position: relative;
+    z-index: 1; */
+
+    /* position: absolute;
+    top: 11px;
+    left: 11px; */
+    
+}
+
+.box2 {
+    background-color: red;
+    /* position: relative;
+    top: -53px;
+    left: 255px; */
+    
+    /* height: 233px;
+    position: sticky;
+    top: 0px; */
+}
+
+.box3 {
+    background-color: lightgreen;
+    /* position: fixed;
+    bottom: 10vh;
+    left: 20vw; */
+}
+
+.box4 {
+    background-color: lightblue;
+}
+
+.parent {
+    padding: 43px;
+    margin: 34px;
+    border: 2px solid purple;
+
+    /* position: absolute; 
+
+
+    as an exception
+    
+    transform: translate(0);
+    filter: blur(0);
+    perspective: 0em;
+    */
+}

@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", sans-serif;
+
+  background-image: url(bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container {
+  height: 75vh;
+  /* height: 90vh; */
+  width: 50vw;
+
+  background-color: rgba(196, 208, 255, 0.384);
+  /* background-color: #ffbf915e; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  left: 25vw;
+
+  font-family: "Roboto", sans-serif;
+
+  margin: 5vh;
+  border-radius: 30px;
+}
+
+.container .inputs {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  top: 4vh;
+  gap: 20px 0;
+}
+
+.inputs input {
+  width: 25vw;
+  padding: 0.5vw 25px;
+  border: 1.5px solid black;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline-color: red;
+}
+
+.inputs input:hover {
+  /* opacity: 80%; */
+  transform: scale(1.1);
+  transition: all 0.1s ease-in;
+}
+
+input[type="file"] {
+  background-color: #fff;
+}
+
+input[type="file"]:focus {
+  outline: 2px solid red;
+  border: 2px solid white;
+}
+
+input[type="file"].active {
+  outline: 2px solid red;
+  border: 2px solid white;
+}
+
+.textBox {
+  font-size: 2.5rem;
+  margin-top: 6vh;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button button {
+  /* position: absolute; */
+  margin-top: 8vh;
+  padding: 16px 44px;
+  background-color: rgb(198, 232, 241);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.button button:hover {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in;
+  /* opacity: 80%; */
+}
+
+.errorBox {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  color: white;
+  /* background: #d32f2f; */
+  background: rgb(48, 48, 48);
+
+  padding: 12px 18px;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateX(100%);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+  pointer-events: none;
+}
+
+.errorBox.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#cross {
+  pointer-events: auto;
+}
+
+#cross:hover {
+  background-color: #646464;
+  border-radius: 50%;
+  padding: 4px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.videoBox {
+  background-color: #fff;
+  width: 40vw;
+  height: 15vh;
+  margin: auto;
+  border-radius: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.left {
+  background-color: black;
+  height: 12vh;
+  width: 10vw;
+  border-radius: 15px;
+  margin-left: 3vw;
+  margin-right: 0.5vw;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.right {
+  /* background-color: red; */
+  height: 12vh;
+  width: 25vw;
+  border-radius: 15px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.primary,
+.secondary,
+.third {
+  height: 3vh;
+  width: 24vw;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+}
+
+.primary {
+  /* background-color: yellow; */
+  margin: 1vh auto 0 auto;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.secondary {
+  /* background-color: purple; */
+  margin: 0.2vh auto;
+  font-weight: 400;
+  color: #7a7a7a;
+  font-size: 14px;
+}
+
+.third {
+  margin: 0.8vh auto;
+  /* background-color: blue; */
+  font-weight: bold;
+}
+
+.videoBox {
+  opacity: 0;
+  transform: opacity(100%);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+  pointer-events: none;
+}
+
+.duration {
+  height: 2vh;
+  width: 2.5vw;
+  margin: 0.75vw;
+  background-color: rgb(31, 30, 30);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border: 4px;
+  font-size: 14px;
+}

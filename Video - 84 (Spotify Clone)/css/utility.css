@@ -1,0 +1,94 @@
+@font-face {
+    font-family: spotify;
+    src: url("/fonts/Spotify Mix UI/spotify_mix_ui_regular.otf");
+}
+
+
+.border-red {
+    /* border: 2px solid red; */
+    margin: 2px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.bg-black {
+    background-color: #000000;
+    color: white;
+}
+
+.invert-w {
+    filter: invert();
+}
+
+.invert-g {
+    filter: invert(0.65);
+}
+
+.bg-grey {
+    background-color: #121212;
+}
+
+.rounded {
+    border-radius: 7px;
+}
+
+.m1 {
+    margin: 10px 0px 10px 5px;
+}
+
+.p1{
+    padding: 20px;
+}
+
+.font-title {
+    font-family: spotify;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.font-norc {
+    color: #969696;
+    color: #B3B3B3;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.hover:hover {
+    background-color: #1F1F1F;
+}
+
+/* Slim dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333 #000;
+}

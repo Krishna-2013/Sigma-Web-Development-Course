@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12_Solution</title>
+  </head>
+  <body>
+    <script>
+      let id;
+      if (localStorage.getItem("Token")) {
+        let statement = true;
+        statement = expire();
+        if (!statement) {
+          id = setInterval(() => {
+            statement = expire();
+          }, 59000);
+        }
+      } else {
+        save();
+      }
+
+      function save() {
+        const token = prompt("Enter your token: ");
+        const exT = prompt(
+          "Enter expire (Ex. 00:00) in 24-hour format: ",
+        ).trim();
+        localStorage.setItem("Token", token);
+        localStorage.setItem("Expire time", exT);
+      }
+
+      function expire() {
+        let [exTime, time] = timeCalc();
+        let statement = check(exTime, time);
+        return statement;
+      }
+
+      function timeCalc() {
+        const exT = localStorage.getItem("Expire time");
+        const exHour = Number(exT.split(":")[0]);
+        const exMin = Number(exT.split(":")[1]);
+
+        const exTime = exHour + exMin / 60;
+
+        const today = new Date();
+        const hour = today.getHours();
+        const minute = today.getMinutes();
+
+        const time = hour + minute / 60;
+        return [exTime, time];
+      }
+
+      function check(exTime, time) {
+        if (exTime <= time) {
+          localStorage.removeItem("Token");
+          localStorage.removeItem("Expire time");
+          if (id) {
+            clearInterval(id);
+          }
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

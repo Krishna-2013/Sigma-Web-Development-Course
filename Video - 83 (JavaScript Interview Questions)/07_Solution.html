@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solution - 07</title>
+    <style>
+      button {
+        margin: 34px;
+        padding: 12px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Add a note</button>
+    <div class="note"></div>
+    <script>
+      //   if (localStorage.getItem("name")) {
+      //     a = localStorage.getItem("name");
+      //     document.write("Hello " + a);
+      //   } else {
+      //     let a = prompt("Enter your name: ");
+      //     localStorage.setItem("name", a);
+      //     document.write("Hello " + a);
+      //   }
+
+      if (localStorage.getItem("note")) {
+        note = localStorage.getItem("note");
+        document.querySelector(".note").innerText = note;
+      } else {
+        let note = prompt("Enter your note: ");
+        localStorage.setItem("note", note);
+        document.querySelector(".note").innerText = note;
+    }
+    
+    document.querySelector("button").addEventListener("click", () => {
+          let note = prompt("Enter your note: ");
+          localStorage.setItem("note", note);
+          document.querySelector(".note").innerText = note;
+      })
+    </script>
+  </body>
+</html>

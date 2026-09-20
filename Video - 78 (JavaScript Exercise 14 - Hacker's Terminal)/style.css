@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  background: black;
+  color: #00aa00;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+
+.btnCont {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start {
+  background-color: rgb(58, 58, 58);
+  padding: 12px 6px;
+  font-size: 1rem;
+  border-radius: 7px;
+}
+
+.msgBox {
+  margin: 1.5vw;
+}
+
+.msgBox p {
+  margin: 30px 0;
+  font-size: 1.25rem;
+}
+
+.bolder {
+  font-weight: 900;
+  font-size: 1.35rem;
+}
+
+#m1 {
+  display: none;
+}
+
+#m2 {
+  display: none;
+}
+
+#m3 {
+  display: none;
+}
+
+#m4 {
+  display: none;
+}
+
+#m5 {
+  display: none;
+}
+
+#m6 {
+  display: none;
+}
+
+
+.dots::after {
+  content: "";
+  animation: aniDots 1.5s infinite;
+}
+
+@keyframes aniDots {
+  20% {
+    content: "";
+  }
+
+  40% {
+    content: ".";
+  }
+
+  60% {
+    content: "..";
+  }
+
+  80% {
+    content: "...";
+  }
+
+  100% {
+    content: "";
+  }
+}

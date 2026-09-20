@@ -1,0 +1,15 @@
+.box {
+    border: 2px solid black;
+    margin: 34px;
+    padding: 34px;
+    /* box-shadow: h-offset v-offset blur spread color inset; */
+    box-shadow: 20px 14px 20px #888888;
+}
+
+.textEl {
+    margin: 100px;
+    text-shadow: 7px 4px 6px #d29797;
+    outline: 2px solid black;
+    outline-offset: 30px;
+    border-radius: 20px;
+}

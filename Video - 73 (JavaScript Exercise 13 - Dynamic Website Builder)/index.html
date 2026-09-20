@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Exercise 13 - Dynamic Website Builder</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="textBox">
+        ▶️<span class="bold">YouTube</span> Video Card Generator.
+      </div>
+      <form action="#" class="form">
+        <div class="inputs">
+          <input
+            type="text"
+            id="cName"
+            placeholder="Enter Your Channel Name: "
+            required
+          />
+          <input
+            type="text"
+            id="title"
+            placeholder="Enter Your Video Title: "
+            required
+          />
+          <input
+            type="text"
+            id="tags"
+            placeholder="Enter Your Video Tags: "
+            required
+          />
+          <input
+            type="text"
+            id="videoViews"
+            placeholder="Enter Your Video Views: "
+            required
+          />
+          <input
+            type="date"
+            id="uploadDate"
+            placeholder="Enter Your Video Upload Date: "
+            required
+          />
+          <input
+            type="file"
+            id="thumbnail"
+            accept="image/*"
+            placeholder="Enter Your Video Thumbnail link: "
+            required
+          />
+          <input
+            type="text"
+            id="duration"
+            placeholder="Enter Your Video Duration (Ex: 00:00:00): "
+            required
+          />
+        </div>
+        <div class="button">
+          <button id="button" type="submit">Submit</button>
+        </div>
+      </form>
+      <div class="videoBox">
+        <div class="left">
+          <div class="duration"></div>
+        </div>
+        <div class="right">
+          <div class="primary">
+            <div class="main_title"></div>
+            <span> &nbsp; | &nbsp; </span>
+            <div class="main_tags"></div>
+          </div>
+          <div class="secondary">
+            <div class="main_views"></div>
+            <span> &nbsp; | &nbsp; </span>
+            <div class="main_date"></div>
+          </div>
+          <div class="third">
+            <div class="main_name"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="errorBox">
+      <span id="errorMessage">⚠️ This is an Error</span>&nbsp;&nbsp;<span
+        id="cross"
+        ><i class="fa-sharp-duotone fa-solid fa-xmark"></i
+      ></span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

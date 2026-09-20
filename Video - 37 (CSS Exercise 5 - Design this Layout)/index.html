@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Exercise 5 - Design this Layout</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      :root {
+        /* BGC */
+        --nav-bgc: rgb(241, 220, 220); 
+        --btn-bgc : rgb(238, 161, 60);
+        --main-bgc : rgb(245, 245, 179);
+        --section-left-bgc : red;
+        --section-right-bgc : yellow;
+        --bottom-div-bgc : rgb(41, 39, 39);
+        --footer-bgc : rgb(94, 167, 167);
+
+        /* Color */
+        --primary-color: black;
+        --secondary-color: rgb(184, 19, 206);
+
+        /* Font */
+        --font-size: 30px;
+        --font-family:
+          "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+
+      body {
+        background-color: var(--bottom-div-bgc);
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+        width: 80vw;
+        border-bottom: 2px solid gray;
+        margin: auto;
+        padding-bottom: 13px;
+        background-color: var(--nav-bgc);
+      }
+
+      nav a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+      .left {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+
+      ul {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-left: 30px;
+      }
+
+      li {
+        font-size: var(--font-size);
+        padding: 0 34px;
+        list-style: none;
+      }
+
+      nav a:hover {
+        transition: 0.2s ease-in-out;
+        opacity: 50%;
+        font-size: 34px;
+      }
+
+      .logo {
+        margin-left: 12px;
+      }
+      .logo img {
+        height: 4vw;
+      }
+
+      .right input {
+        border-radius: 25px;
+        padding: 6px 10px;
+    }
+
+    .right input::placeholder {
+        color: var(--secondary-color);
+    }
+
+    .right button {
+        margin: 0 30px;
+        border-radius: 10px;
+        background-color: var(--btn-bgc);
+        padding: 7px;
+        cursor: pointer;
+    }
+
+    main {
+        background-color: var(--main-bgc);
+        height: 50vh;
+        width: 70vw;
+        margin: 5vh auto;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section-left, section-right {
+        height: 40vh;
+        width: 20vw;
+        border: 2px solid black;
+        margin: 20px;
+        border-radius: 10px;
+    }
+
+    section-left {
+        background-color: var(--section-left-bgc);
+    }
+
+    section-right {
+        background-color: var(--section-right-bgc);
+    }
+
+    .bottom-div {
+        color: white;
+        width: 50vw;
+        border: 2px solid white;
+        border-radius: 50px;
+        height: 10vh;
+        margin: auto;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20vh;
+    }
+
+    .bottom-div > p {
+        font-size: var(--font-size);
+        font-family: var(--font-family);
+    }
+
+    footer {
+        background-color : var(--footer-bgc);
+        height: 8vh;
+        color: white;
+        font-size: var(--font-size);
+        font-family: var(--font-family);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom-logo {
+        position: fixed;
+        right: 2vw;
+        bottom: 2vw;
+    }
+
+    .bottom-logo img{
+        height: 4vw;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+            <div class="logo">
+                <img src="https://sigmadevelopers.vercel.app/assets/logo-3047e6ae.png" alt="">
+            </div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="right">
+            <input type="text" placeholder="Search for more content">
+            <button>Search</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+        <section-left>
+
+        </section-left>
+
+        <section-right>
+
+        </section-right>
+
+    </main>
+
+    <div class="bottom-div">
+        <p>Welcome to "Sigma Web Development Course Express".</p>
+    </div>
+
+    <footer>
+        <p>All &copy; copyrights reserved!</p>
+    </footer>
+
+    <div class="bottom-logo">
+        <img src="https://sigmadevelopers.vercel.app/assets/logo-3047e6ae.png" alt="">
+    </div>
+  </body>
+</html>
