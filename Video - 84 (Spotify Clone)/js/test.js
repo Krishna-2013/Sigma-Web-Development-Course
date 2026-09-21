@@ -15,9 +15,8 @@ const right = document.querySelector(".right");
 
 async function getSongs(folder) {
   currFolder = folder;
-  localStorage.setItem("folder", currFolder);
 
-  let a = await fetch(`http://127.0.0.1:3000/${currFolder}/`);
+  let a = await fetch(`https://krishna-2013.github.io/Sigma-Web-Development-Course/Video%20-%2084%20(Spotify%20Clone)/${currFolder}/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -26,7 +25,7 @@ async function getSongs(folder) {
 
   for (let index = 0; index < as.length; index++) {
     const element = as[index];
-    if (element.href.endsWith(".mp3")) {
+    if (element.href.endsWith(".mp3") || element.href.endsWith(".m4a")) {
       songs.push(element.href.split(`${folder.replace("songs/", "")}%5C`)[1]);
     }
   }
@@ -77,6 +76,7 @@ function playMusic(track) {
   }, 1000);
 
   localStorage.setItem("lastSong", track);
+  localStorage.setItem("folder", currFolder);
 }
 
 function loadhis(track) {
@@ -98,7 +98,7 @@ function formatTime(seconds) {
 }
 
 async function displayAlbums() {
-  let a = await fetch(`http://127.0.0.1:3000/songs/`);
+  let a = await fetch(`https://krishna-2013.github.io/Sigma-Web-Development-Course/Video%20-%2084%20(Spotify%20Clone)/songs/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -109,7 +109,7 @@ async function displayAlbums() {
       let folder = e.href.replace("%5Csongs%5C", "").split("/").slice(-2)[0];
 
       // Get the metadate
-      let a = await fetch(`http://127.0.0.1:3000/songs/${folder}/info.json`);
+      let a = await fetch(`https://krishna-2013.github.io/Sigma-Web-Development-Course/Video%20-%2084%20(Spotify%20Clone)/songs/${folder}/info.json`);
       let response = await a.json();
       console.log(response);
       cardCont.innerHTML =
@@ -139,20 +139,19 @@ async function displayAlbums() {
 
     songs = await getSongs(`songs/${folder}`);
     loadSongs(songs);
+    playMusic(songs[0].replaceAll("%20", " "));
   });
 
-
   cardCont.addEventListener("mouseover", (e) => {
-
     const card = e.target.closest(".card");
     const playBtn = card.querySelector(".play");
-    
+
     if (window.innerWidth > 1400) {
       card.addEventListener("mouseover", () => {
         playBtn.style.opacity = "1";
         playBtn.style.bottom = "120px";
       });
-      
+
       card.addEventListener("mouseout", () => {
         playBtn.style.bottom = "105px";
         playBtn.style.opacity = "0";
@@ -163,18 +162,18 @@ async function displayAlbums() {
         playBtn.style.bottom = "20px";
         // playBtn.style.right = "35px";
       });
-      
+
       card.addEventListener("mouseout", () => {
         playBtn.style.bottom = "-10px";
         playBtn.style.opacity = "0";
       });
     }
-  })
-  };
-  
-  async function main() {
-    // Display all the albums
-    displayAlbums();
+  });
+}
+
+async function main() {
+  // Display all the albums
+  displayAlbums();
 
   let lastSong = localStorage.getItem("lastSong");
   if (lastSong) {
@@ -197,6 +196,11 @@ async function displayAlbums() {
       play.src = "img/pauseBtn.svg";
       play.classList.add("ext");
       songBtn.style.gap = "28px";
+
+      proggress = setInterval(() => {
+        document.querySelector(".line").style.width =
+          `${(currentSong.currentTime / currentSong.duration) * 100}%`;
+      }, 1000);
     } else {
       currentSong.pause();
       play.src = "img/playBtn.png";
@@ -287,8 +291,27 @@ async function displayAlbums() {
     .querySelector(".range")
     .getElementsByTagName("input")[0]
     .addEventListener("input", (e) => {
-      currentSong.volume = e.target.value / 100;
+      const icon = document.querySelector(".volume img");
+      console.log(icon);
+      if (icon.src.includes("volume.svg")) {
+        currentSong.volume = e.target.value / 100;
+      }
     });
+
+  // add event listeners toi mute
+  document.querySelector(".volume img").addEventListener("click", (e) => {
+    if (e.target.src.includes("volume.svg")) {
+      e.target.src = e.target.src.replace("volume.svg", "mute.svg");
+      currentSong.volume = 0;
+      document.querySelector(".range").getElementsByTagName("input")[0].value =
+        0;
+    } else {
+      e.target.src = e.target.src.replace("mute.svg", "volume.svg");
+      currentSong.volume = 0.1;
+      document.querySelector(".range").getElementsByTagName("input")[0].value =
+        10;
+    }
+  });
 }
 
 main();
